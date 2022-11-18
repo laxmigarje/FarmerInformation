@@ -1,0 +1,89 @@
+﻿@model IEnumerable<FarmerInformation.Models.Farmer>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.First_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Middle_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Last_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mobile_no)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Addhar_no)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Farmer_Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.District_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Taluka_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Village_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.First_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Middle_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Last_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mobile_no)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Addhar_no)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Farmer_Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.District_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Taluka_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Village_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
